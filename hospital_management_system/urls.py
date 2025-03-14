@@ -22,4 +22,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('patients/', include('patients.urls')),
     path("medical-history/", include('medical_history.urls')),
+    path("appointments/", include('appointments.urls')),
+    path("billings/", include('billing.urls')),
+    path("departments/", include('department.urls')),
+    path("doctors/", include('doctors.urls')),
+    path("medications/", include('medication.urls')),
+    path("notifications/", include('notification.urls')),
+    path("prescriptions/", include('prescription.urls')),
+    path("staff/", include('staff.urls')),
+    path("users/", include('users.urls')),
 ]

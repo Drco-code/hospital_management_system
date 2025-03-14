@@ -3,6 +3,7 @@ from django.utils.translation import gettext_lazy as _
 
 from users.models import User
 
+
 import uuid
 
 # Create your models here.
@@ -36,7 +37,6 @@ class Patient(models.Model):
     emergency_contact = models.TextField(_("Emergency Contact"))
     insurance_number = models.CharField(_("Insurance Number"), max_length=50)
     blood_group = models.CharField(_("Blood Group"), max_length=3, choices=BloodGroup.choices, default=BloodGroup.O_POS)
-    medical_history = models.TextField(_("Medical History"))
     created_at = models.DateTimeField(_("Creation Date"), auto_now_add=True)
     updated_at = models.DateTimeField(_("Updated Date"), auto_now=True)
 
