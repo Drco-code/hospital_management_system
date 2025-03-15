@@ -1,9 +1,10 @@
 from rest_framework import serializers
 
 from doctors.models import Doctor
-
+from appointments.serializers import AppointmentSerializer
 
 class DoctorSerializer(serializers.ModelSerializer):
+    appointment = AppointmentSerializer(many=True, read_only=True)
 
     class Meta:
         model = Doctor
@@ -17,4 +18,5 @@ class DoctorSerializer(serializers.ModelSerializer):
             'contact',
             'email',
             'availability',
+            'appointment',
         )

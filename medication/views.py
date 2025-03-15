@@ -10,3 +10,9 @@ from medication.serializers import MedicationSerializer
 class MedicationListCreateAPIView(generics.ListCreateAPIView):
     queryset = Medication.objects.all()
     serializer_class = MedicationSerializer
+
+
+class MedecationRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Medication.objects.all()
+    serializer_class = MedicationSerializer
+    lookup_url_kwarg = 'medication_id'

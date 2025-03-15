@@ -9,3 +9,8 @@ from medical_history.models import MedicalHistory
 class MedicalHistoryListCreateAPIView(generics.ListCreateAPIView):
     queryset = MedicalHistory.objects.all()
     serializer_class = MedicalHistorySerializer
+
+class MedicalHistoryRetieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = MedicalHistory.objects.all()
+    serializer_class = MedicalHistorySerializer
+    lookup_url_kwarg = 'history_id'

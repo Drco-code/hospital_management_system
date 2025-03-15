@@ -6,7 +6,12 @@ urlpatterns = [
         "",
         views.MedicationListCreateAPIView.as_view(),
         name="medications"
-    )
+    ),
+    path(
+        "<str:medication_id>/",
+        views.MedecationRetrieveUpdateDestroyAPIView.as_view(),
+        name="medication"
+    ),
     
     
 ]
