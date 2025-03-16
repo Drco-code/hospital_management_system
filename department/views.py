@@ -11,3 +11,8 @@ from department.serializers import DepartmentSerializer
 class DepartmentListCreateAPIView(generics.ListCreateAPIView):
     queryset = Department.objects.all()
     serializer_class = DepartmentSerializer
+
+class DepartmentRetriveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Department.objects.all()
+    serializer_class = DepartmentSerializer
+    lookup_url_kwarg = 'department_id'

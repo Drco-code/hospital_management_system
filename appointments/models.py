@@ -14,8 +14,8 @@ class AppointmentStatus(models.TextChoices):
 
 class Appointment(models.Model):
     appointment_id = models.UUIDField(_("Appointment ID"), primary_key=True, default=uuid.uuid4, editable=False)
-    patient = models.ForeignKey(Patient, verbose_name=_("Patient"), on_delete=models.CASCADE)
-    doctor = models.ForeignKey(Doctor, verbose_name=_("Doctor"), on_delete=models.CASCADE)
+    patient = models.ForeignKey(Patient, verbose_name=_("Patient"), on_delete=models.CASCADE, related_name='appointment')
+    doctor = models.ForeignKey(Doctor, verbose_name=_("Doctor"), on_delete=models.CASCADE, related_name='appointment')
     appointment_date = models.DateTimeField(_("Appointment Date"))
     appointment_status = models.CharField(_("Appointment Status"), max_length=2, choices=AppointmentStatus.choices, default=AppointmentStatus.PENDING)
     reason_visiting = models.TextField(_("Reason For Visit"))

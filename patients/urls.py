@@ -11,6 +11,16 @@ urlpatterns = [
         "<str:patient_id>/",
         views.PatientRetriveUpdateDeleteAPIView.as_view(),
         name="patient"
-    )
+    ),
+    path(
+        "<str:patient_id>/medical-history/<str:history_id>/",
+        views.PatientMedicalRecordsRetrieveUpdateDestroyView.as_view(),
+        name="patient-medical-history"
+    ),
+    path(
+        "<str:patient_id>/appointment/<str:appointment_id>/",
+        views.PatientAppointmentRetrieveUpdateDestroyView.as_view(),
+        name="patient-appointment"
+    ),
     
 ]

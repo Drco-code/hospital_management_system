@@ -6,7 +6,12 @@ urlpatterns = [
         "",
         views.UserListCreataAPIView.as_view(),
         name="users"
-    )
+    ),
+    path(
+        "<int:id>/",
+        views.UserRetrieveUpdateDestroyAPIView.as_view(),
+        name="user"
+    ),
     
     
 ]

@@ -12,3 +12,9 @@ from notification.serializers import NotificationSerializer
 class NotificationListCreateAPIView(generics.ListCreateAPIView):
     queryset = Notification.objects.all()
     serializer_class = NotificationSerializer
+
+class NotificationRetieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Notification.objects.all()
+    serializer_class = NotificationSerializer
+    lookup_url_kwarg = "notification_id"
+

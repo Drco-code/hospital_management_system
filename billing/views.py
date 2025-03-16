@@ -11,3 +11,11 @@ from billing.serializers import BillingsSerializer
 class BillingsListCreateAPIView(generics.ListCreateAPIView):
     queryset = Billing.objects.all()
     serializer_class = BillingsSerializer
+
+class BillingRetriveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Billing.objects.all()
+    serializer_class = BillingsSerializer
+    lookup_field = 'billing_id'
+
+
+

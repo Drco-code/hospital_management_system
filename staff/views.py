@@ -10,3 +10,9 @@ from staff.serializers import StaffSerializer
 class StaffListCreateAPIView(generics.ListCreateAPIView):
     queryset = Staff.objects.all()
     serializer_class = StaffSerializer
+
+
+class StaffRetriveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Staff.objects.all()
+    serializer_class = StaffSerializer
+    lookup_url_kwarg = 'staff_id'

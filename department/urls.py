@@ -6,7 +6,12 @@ urlpatterns = [
         "",
         views.DepartmentListCreateAPIView.as_view(),
         name="departments"
-    )
+    ),
+    path(
+        "<uuid:department_id>/",
+        views.DepartmentRetriveUpdateDestroyAPIView.as_view(),
+        name="department"
+    ),
     
     
 ]

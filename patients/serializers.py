@@ -2,11 +2,14 @@ from rest_framework import serializers
 from patients.models import Patient
 
 from medical_history.serializers import MedicalHistorySerializer
+from appointments.serializers import AppointmentSerializer
 
 
 
 class PatientSerializer(serializers.ModelSerializer):
     medical_history = MedicalHistorySerializer(many=True, read_only=True)
+    appointment = AppointmentSerializer(many=True, read_only=True)
+
     
     class Meta:
         model = Patient
@@ -25,5 +28,6 @@ class PatientSerializer(serializers.ModelSerializer):
             'insurance_number',
             'blood_group',
             'medical_history',
+            'appointment',
         )
         
