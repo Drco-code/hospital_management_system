@@ -4,13 +4,13 @@ from users import views
 urlpatterns = [
     path(
         "",
-        views.UserListCreataAPIView.as_view(),
-        name="users"
+        views.UserListCreateAPIView.as_view(),
+        name="user-list"
     ),
     path(
         "<int:id>/",
         views.UserRetrieveUpdateDestroyAPIView.as_view(),
-        name="user"
+        name="user-detail"
     ),
     
     

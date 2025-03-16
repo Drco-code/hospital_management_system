@@ -13,7 +13,7 @@ urlpatterns = [
         name="doctor"
     ),
     path(
-        "<str:doctor_id>/appointment/<str:appointment_id>",
+        "<str:doctor_id>/appointment/<str:appointment_id>/",
         views.DoctorAppointmentReteiveUpdateDestroyAPIView.as_view(),
         name="doctor-appointment"
     ),

@@ -8,7 +8,7 @@ urlpatterns = [
         name="medications"
     ),
     path(
-        "<uuid:medication_id>",
+        "<uuid:medication_id>/",
         views.MedicationRetrieveUpdateDestroyAPIView.as_view(),
         name="medication"
     ),
