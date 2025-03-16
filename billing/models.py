@@ -17,5 +17,5 @@ class Billing(models.Model):
     updated_at = models.DateTimeField(_("Updated Date"), auto_now=True)
 
     def __str__(self):
-        return f"Billing for {self.patient} - Appointment {self.appointment.id} - Amount {self.total_amount}"
+        return f"Billing for {self.patient}  - Amount {self.total_amount}"
 
