@@ -41,3 +41,4 @@ class NotificationRetieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIV
     authentication_classes = [JWTAuthentication, SessionAuthentication]
     permission_classes = [IsAdminUser]
 
+            
