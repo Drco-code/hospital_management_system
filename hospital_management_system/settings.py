@@ -40,10 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'drf_spectacular', # OpenAPI 3.0 schema generator
 
     'rest_framework',
     'rest_framework_simplejwt',
     'django_filters',
+
+    'silk', # SILK PROFILER
 
 
     'users',
@@ -58,9 +61,11 @@ INSTALLED_APPS = [
     'notification',
     "medical_history",
 
+
 ]
 
 MIDDLEWARE = [
+     'silk.middleware.SilkyMiddleware', # SILK PROFILER
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -164,11 +169,20 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
         'anon': '60/min', # 60 rpm per annonymous user
         'user': '150/min' # 150 rpm per authenticated user
-    }
+    },
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema', # OpenAPI 3.0 schema generator
 }
 
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1)
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Hospital Management System API',
+    'DESCRIPTION': 'A Hospital Management System API built with Django Rest Framework',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
 }
