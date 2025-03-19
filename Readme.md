@@ -67,15 +67,10 @@ DATABASES = {
     }
 }
 
-Email settings
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'your-email@gmail.com'
-EMAIL_HOST_PASSWORD = 'your-password'
+
 ```
-3. Replace the placeholders with your actual database and email settings.
+3. Replace the placeholders with your actual database
+4. Make sure you have created a database in mysql called hospital_management_system'
 
 Usage
 
