@@ -1,17 +1,19 @@
 # Hospital Management System
 
+This is a Hospital Management System built with Django and Django REST framework. It provides functionalities to manage appointments, billing, departments, doctors, medical history, medication, notifications, patients, prescriptions, staff, and users.
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
 2. [Features](#features)
-3. [System Requirements](#system-requirements)
-4. [Installation](#installation)
-5. [Configuration](#configuration)
-6. [Usage](#usage)
-7. [API Documentation](#api-documentation)
-8. [Contributing](#contributing)
-9. [License](#license)
-10. [Acknowledgments](#acknowledgments)
+3. [Setup Instructions](#setup-instructions)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+   - [Running Tests](#running-tests)
+4. [Project Structure](#project-structure)
+5. [Authentication](#authentication)
+6. [API Endpoints](#api-endpoints)
+7. [License](#license)
 
 ---
 
@@ -23,71 +25,68 @@ The Hospital Management System is designed to streamline hospital operations, im
 
 ## Features
 
-- *Patient Management*: Create, edit, and manage patient profiles, including demographic information, medical history, and insurance details.
-- *Appointment Scheduling*: Schedule appointments for patients with doctors and other healthcare professionals.
-- *Billing and Insurance*: Manage billing and insurance claims for patients, including payment tracking and insurance verification.
-- *Doctor and Staff Management*: Create, edit, and manage doctor and staff profiles, including their schedules, specialties, and contact information.
-- *Department Management*: Create, edit, and manage hospital departments, including their descriptions, contact information, and staff assignments.
-- *Notification System*: Send notifications to patients, doctors, and staff about appointments, billing, and other important events.
-- *Reporting and Analytics*: Generate reports and analytics on patient data, appointment schedules, billing, and other key metrics.
+- **Patient Management**: Create, edit, and manage patient profiles, including demographic information, medical history, and insurance details.
+- **Appointment Scheduling**: Schedule appointments for patients with doctors and other healthcare professionals.
+- **Billing and Insurance**: Manage billing and insurance claims for patients, including payment tracking and insurance verification.
+- **Doctor and Staff Management**: Create, edit, and manage doctor and staff profiles, including their schedules, specialties, and contact information.
+- **Department Management**: Create, edit, and manage hospital departments, including their descriptions, contact information, and staff assignments.
+- **Notification System**: Send notifications to patients, doctors, and staff about appointments, billing, and other important events.
+- **Reporting and Analytics**: Generate reports and analytics on patient data, appointment schedules, billing, and other key metrics.
 
 ---
 
-## System Requirements
+## Setup Instructions
 
-- *Python*: 3.8 or higher
-- *Django*: 4.1 or higher
-- *Database*: MySQL or PostgreSQL
-- *Operating System*: Windows, macOS, or Linux
+### Prerequisites
 
----
+- **Python**: 3.x
+- **pip**: Python package installer
+- **virtualenv**: Optional but recommended for creating isolated environments.
 
-## Installation
+### Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/hospital-management-system.git`
-2. Install the requirements: `pip install -r requirements.txt`
-3. Create the database: `python manage.py migrate`
-4. Run the development server: `python manage.py runserver`
+1. **Clone the repository:**
 
----
+    ```bash
+    git clone https://github.com/Drco-code/hospital_management_system.git
+    cd hospital_management_system
+    ```
 
-## Configuration
+2. **Create a virtual environment (optional but recommended):**
 
-1. Create a new file called `settings.py` in the project root directory.
-2. Add the following code to the file:
-3. Replace the placeholders with your actual database.
-4. Make sure you have created a database in MySQL called `hospital_management_system`.
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
 
----
+3. **Install the required packages:**
 
-## Usage
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-1. Access the admin panel: `http://localhost:8000/admin`
-2. Log in with the admin credentials: `username: derrick`, `password: admin`
-3. Create patients, doctors, and staff: `http://localhost:8000/patients/`, `http://localhost:8000/doctors/`, `http://localhost:8000/staff/`
-4. Schedule appointments: `http://localhost:8000/appointments/`
-5. Manage billing and insurance: `http://localhost:8000/billing/`
+4. **Apply migrations:**
 
----
+    ```bash
+    python manage.py migrate
+    ```
 
-## API Documentation
+5. **Populate initial data (if applicable):**
 
-The API documentation is available at: `http://localhost:8000/api/docs/`
+    ```bash
+    python populate_data.py
+    ```
 
----
+6. **Run the development server:**
 
-## Contributing
+    ```bash
+    python manage.py runserver
+    ```
 
-Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
+### Running Tests
 
----
+To run tests, use the following command:
 
-## License
+```bash
+python manage.py test
 
-The Hospital Management System is licensed under the MIT License.
-
----
-
-## Acknowledgments
-
-The Hospital Management System was built using Django, a high-level Python web framework. We would like to thank the Django community for their support and contributions.
