@@ -28,7 +28,7 @@ class ISAdminOrOwner(permissions.BasePermission):
 
 
 class AppointmentListCreateAPIView(generics.ListCreateAPIView):
-    queryset = Appointment.objects.all()
+    queryset = Appointment.objects.select_related("patient", "doctor")
     serializer_class = AppointmentSerializer
 
     # Set up filtering
