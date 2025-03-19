@@ -1,19 +1,17 @@
 # Hospital Management System
 
-This is a Hospital Management System built with Django and Django REST framework. It provides functionalities to manage appointments, billing, departments, doctors, medical history, medication, notifications, patients, prescriptions, staff, and users.
+This is a Hospital Management System built with Django and Django REST framework. It provides functionalities to manage appointments, billing, departments, doctors, medical history, medication, notifications, patients, **prescriptions**, staff, and users.
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Setup Instructions](#setup-instructions)
-   - [Prerequisites](#prerequisites)
-   - [Installation](#installation)
-   - [Running Tests](#running-tests)
-4. [Project Structure](#project-structure)
-5. [Authentication](#authentication)
-6. [API Endpoints](#api-endpoints)
-7. [License](#license)
+- [Hospital Management System](#hospital-management-system)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Features](#features)
+  - [Setup Instructions](#setup-instructions)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Running Tests](#running-tests)
 
 ---
 
